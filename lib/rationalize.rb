@@ -16,6 +16,7 @@ require "prime"
 #   end
 #   p 1 / 3 #=> 0
 #   p Rationalize.sqrt(Rational(9, 4)) #=> (3/2)
+#
 module Rationalize
   include CMath
   extend CMath
