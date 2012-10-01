@@ -1,7 +1,7 @@
 rationalize - Refinement version of mathn
 =========================================
 
-This project aims to provide refinement version of mathn.rb.
+This project aims to provide a refinement version of mathn.rb.
 
 Install
 ========================
