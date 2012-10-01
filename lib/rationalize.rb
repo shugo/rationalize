@@ -2,9 +2,6 @@ require "cmath"
 require "matrix"
 require "prime"
 
-#require "mathn/rational"
-#require "mathn/complex"
-
 # +Rationalize+ is a refinement version of mathn.
 #
 # @example
