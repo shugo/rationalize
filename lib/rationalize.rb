@@ -28,28 +28,20 @@ module Rationalize
     end
   end
 
-  refine Fixnum do
-    define_alias :/, :quo
-    define_alias :power!, :**
-
-    def ** (other)
-      if self < 0 && other.round != other
-        Complex(self, 0.0) ** other
-      else
-        power!(other)
-      end
+  for klass in [Fixnum, Bignum]
+    refine klass do
+      define_alias :/, :quo
     end
   end
 
-  refine Bignum do
-    define_alias :/, :quo
-    define_alias :power!, :**
-
-    def ** (other)
-      if self < 0 && other.round != other
-        Complex(self, 0.0) ** other
-      else
-        power!(other)
+  for klass in [Fixnum, Bignum, Float]
+    refine klass do
+      def **(other)
+        if self < 0 && other.round != other
+          Complex(self, 0.0) ** other
+        else
+          super(other)
+        end
       end
     end
   end
@@ -113,18 +105,6 @@ module Rationalize
       else
         x , y = other.coerce(self)
         x ** y
-      end
-    end
-  end
-
-  refine Float do
-    define_alias :power!, :**
-
-    def ** (other)
-      if self < 0 && other.round != other
-        Complex(self, 0.0) ** other
-      else
-        power!(other)
       end
     end
   end
