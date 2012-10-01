@@ -1,17 +1,17 @@
-immutable - immutable data structures for Ruby
-==============================================
+rationalize - Refinement version of mathn
+=========================================
 
-This project aims to provide immutable data structures for Ruby.
+This project aims to provide refinement version of mathn.rb.
 
 Install
 ========================
 
-	$ gem install immutable
+	$ gem install rationalize
 
 Documentation
 ========================
 
-* [API Reference](http://rubydoc.info/github/shugo/immutable/frames)
+* [API Reference](http://rubydoc.info/github/shugo/rationalize/frames)
 
 License
 ========================
