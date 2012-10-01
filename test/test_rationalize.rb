@@ -15,6 +15,14 @@ class TestRationalize < Test::Unit::TestCase
     assert_equal(Rational(3, 3), 3 / 3)
   end
 
+  def test_fixnum_power
+    assert_equal(8, 2 ** 3)
+    using Rationalize
+    assert_equal(8, 2 ** Complex(3, 1))
+
+
+  end
+
   def test_sqrt
     assert_equal(Rational(2, 3), Rationalize.sqrt(Rational(4, 9)))
   end

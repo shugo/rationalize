@@ -120,13 +120,13 @@ module Rationalize
   refine Float do
     define_alias :power!, :**
 
-      def ** (other)
-        if self < 0 && other.round != other
-          Complex(self, 0.0) ** other
-        else
-          power!(other)
-        end
+    def ** (other)
+      if self < 0 && other.round != other
+        Complex(self, 0.0) ** other
+      else
+        power!(other)
       end
+    end
   end
 
   def sqrt(a)
