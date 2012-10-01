@@ -1,7 +1,7 @@
 require 'rubygems'
 Gem::Specification.new { |s|
   s.name = "rationalize"
-  s.version = "0.0.0"
+  s.version = "0.0.1"
   s.date = "2012-10-01"
   s.author = "Shugo Maeda"
   s.email = "shugo@ruby-lang.org"
