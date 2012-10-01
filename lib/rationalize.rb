@@ -5,6 +5,17 @@ require "prime"
 #require "mathn/rational"
 #require "mathn/complex"
 
+# +Rationalize+ is a refinement version of mathn.
+#
+# @example
+#
+#   p 1 / 3 #=> 0
+#   class Foo
+#     using Rationalize
+#     p 1 / 3 #=> (1/3)
+#   end
+#   p 1 / 3 #=> 0
+#   p Rationalize.sqrt(Rational(9, 4)) #=> (3/2)
 module Rationalize
   include CMath
   extend CMath
